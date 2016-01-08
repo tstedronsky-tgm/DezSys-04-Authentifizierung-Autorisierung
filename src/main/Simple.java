@@ -52,7 +52,6 @@ class Simple {
 		String user_data = "cn=" + user_name + ",dc=nodomain,dc=com";
 		String user_password = "user";
 
-
 		// Set up environment for creating initial context
 		Hashtable<String, Object> env = new Hashtable<String, Object>(11);
 
@@ -70,9 +69,6 @@ class Simple {
 			DirContext ctx = new InitialDirContext(env);
 			
 			System.out.println("Authentication ok");
-
-			// do something useful with ctx
-
 			// Close the context when we're done
 			ctx.close();
 		} catch (NamingException e) {
